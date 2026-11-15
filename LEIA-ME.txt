@@ -1,0 +1,27 @@
+# Rede PT-BR para Media Station X
+
+Portal independente para Media Station X, com interface escura inspirada em catálogos de streaming e links para serviços oficiais.
+
+## Conteúdo
+- `msx/start.json`: configuração inicial do MSX.
+- `msx/menu.json`: menu e catálogo do portal.
+
+## Hospedagem sugerida (Netlify Drop)
+1. Extraia o ZIP.
+2. Abra https://app.netlify.com/drop em um computador ou navegador compatível.
+3. Envie a pasta `rede_ptbr_msx` inteira (ela contém a pasta `msx`).
+4. O Netlify fornecerá um endereço HTTPS, por exemplo `nome-aleatorio.netlify.app`.
+5. Na TV Samsung, abra Media Station X > Settings > Start Parameter > Setup.
+6. Ative o cadeado/HTTPS se aparecer.
+7. Informe somente o domínio fornecido pelo Netlify, sem `https://` e sem caminhos.
+8. Confirme. O MSX buscará `/msx/start.json`.
+
+## Importante
+- O portal é um catálogo de acesso a serviços oficiais; não hospeda nem redistribui filmes.
+- Os serviços podem alterar catálogo, disponibilidade regional, login e idioma.
+- Nenhum catálogo garante áudio PT-BR em todos os títulos. Confira a faixa de áudio no player.
+- O MSX abre a página oficial pelo comando `link:`. A reprodução embutida depende do site, do navegador da TV e das permissões do provedor; alguns serviços podem abrir em página externa ou não permitir incorporação.
+- O projeto não contém credenciais, chaves de API ou listas de canais não autorizadas.
+
+## Personalização
+Edite `msx/menu.json` para adicionar ou remover serviços. Cada cartão usa `action: "link:https://..."`.
